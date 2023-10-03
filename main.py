@@ -73,13 +73,13 @@ class App:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("img_url")
-    parser.add_argument("kernel_size", type=int)
-    parser.add_argument("wave_width", type=int)
-    parser.add_argument("wave_height", type=int)
-    parser.add_argument("window_width", type=int)
-    parser.add_argument("window_height", type=int)
-    parser.add_argument("pixel_width", type=int)
+    parser.add_argument("img_url", help="path for the image relative to the root of this project")
+    parser.add_argument("kernel_size", type=int, help="size of the kernel")
+    parser.add_argument("wave_width", type=int, help="width of the wave function")
+    parser.add_argument("wave_height", type=int, help="height of the wave function")
+    parser.add_argument("window_width", type=int, help="width of the pygame window")
+    parser.add_argument("window_height", type=int, help="height of the pygame window")
+    parser.add_argument("pixel_width", type=int, help="width of a pixel in the output image")
     args = parser.parse_args()
 
     app = App(args.img_url, args.kernel_size, args.wave_width, args.wave_height, args.window_width, args.window_height, args.pixel_width)
