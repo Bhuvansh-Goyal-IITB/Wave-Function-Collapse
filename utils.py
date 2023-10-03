@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def create_adjacency(patterns):
     adjacency = tuple(tuple(set() for _ in range(4)) for _ in range(len(patterns)))
 
@@ -13,6 +14,7 @@ def create_adjacency(patterns):
                 adjacency[j][2].add(i)
 
     return adjacency
+
 
 def get_all_patterns(data, size):
     width, height = len(data[0]), len(data)

@@ -1,5 +1,6 @@
 import random
 
+
 class Patch:
     def __init__(self, pos, num_patterns):
         self.pos = pos

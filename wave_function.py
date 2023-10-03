@@ -3,6 +3,7 @@ from utils import *
 from collections import Counter
 from PIL import Image
 
+
 class Wave:
     def __init__(self, img_url, kernel_size, width, height):
         img = Image.open(img_url)
@@ -48,7 +49,7 @@ class Wave:
     def collapse(self, x, y):
         self.wave[y][x].collapse(self.frequencies)
         
-    def propogate(self, pos):
+    def propagate(self, pos):
         queue = [pos]
 
         directions = ((0, -1), (1, 0), (0, 1), (-1, 0))
@@ -72,5 +73,5 @@ class Wave:
                     neighbour.possible_ids = intersection
                     
                     queue.append((nx, ny))
-            
+
         return True

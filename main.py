@@ -58,7 +58,7 @@ class App:
                     break
 
                 self.wave_function.collapse(min_pos[0], min_pos[1])
-                if self.wave_function.propogate(min_pos):
+                if self.wave_function.propagate(min_pos):
                     self.draw_wave()
                     self.clock.tick(0)
                     continue
