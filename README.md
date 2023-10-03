@@ -26,3 +26,7 @@ python main.py "./samples/MagicOffice.png" 3 80 80 800 800 10
 <div align="center">
   <img src="https://github.com/Bhuvansh-Goyal-IITB/Wave-Function-Collapse/assets/128956146/e8be760d-7af3-4279-a691-e95baa4df94a" alt="GIF"/>
 </div>
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
