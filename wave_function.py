@@ -4,8 +4,8 @@ from collections import Counter
 from PIL import Image
 
 class Wave:
-    def __init__(self, imgUrl, kernel_size, width, height):
-        img = Image.open(imgUrl)
+    def __init__(self, img_url, kernel_size, width, height):
+        img = Image.open(img_url)
         data = [[tuple(img.getdata())[x + y * img.width] for x in range(img.width)] for y in range(img.height)]
         
         all_patterns = get_all_patterns(data, kernel_size)
