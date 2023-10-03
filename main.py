@@ -11,6 +11,10 @@ class App:
     def __init__(self, img_url, kernel_size, wave_width, wave_height, window_width, window_height, pixel_width):
         pygame.init()
         self.screen = pygame.display.set_mode((window_width, window_height))
+        
+        pygame.display.set_icon(pygame.image.load('icon.ico').convert_alpha())
+        pygame.display.set_caption("Wave Function Collapse")
+        
         self.clock = pygame.time.Clock()
         self.is_running = True
         self.success = False
