@@ -18,9 +18,9 @@ python -m pip install -r requirements.txt
 ## Usage
 Here is a example of how to run this script
 ```bash
-python main.py "./samples/MagicOffice.png" 3 80 80 800 800 10
+python main.py "./samples/MagicOffice.png" 3 800 800 20
 ```
-![WFC](https://github.com/Bhuvansh-Goyal-IITB/Wave-Function-Collapse/assets/128956146/5b324212-4729-4228-b4e0-46a2a0838c5c)
+<img width="641" alt="WFC" src="https://github.com/Bhuvansh-Goyal-IITB/Wave-Function-Collapse/assets/128956146/4a59b702-c36d-478d-b47c-7dacb6d04c41">
 
 ## Example
 <div align="center">
