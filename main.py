@@ -8,7 +8,7 @@ import argparse
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
 
 class App:
-    def __init__(self, img_url, kernel_size, wave_width, wave_height, window_width, window_height, pixel_width):
+    def __init__(self, img_url, kernel_size, window_width, window_height, pixel_width):
         pygame.init()
         self.screen = pygame.display.set_mode((window_width, window_height))
         
@@ -22,7 +22,7 @@ class App:
         self.pixel_width = pixel_width
 
         self.wave_function = None
-        self.set_wave_function(img_url, kernel_size, wave_width, wave_height)
+        self.set_wave_function(img_url, kernel_size, int(window_width/pixel_width), int(window_height/pixel_width))
 
     def set_wave_function(self, img_url, kernel_size, wave_width, wave_height):
         self.wave_function = Wave(img_url, kernel_size, wave_width, wave_height)
@@ -79,12 +79,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("img_url", help="path for the image relative to the root of this project")
     parser.add_argument("kernel_size", type=int, help="size of the kernel")
-    parser.add_argument("wave_width", type=int, help="width of the wave function")
-    parser.add_argument("wave_height", type=int, help="height of the wave function")
     parser.add_argument("window_width", type=int, help="width of the pygame window")
     parser.add_argument("window_height", type=int, help="height of the pygame window")
     parser.add_argument("pixel_width", type=int, help="width of a pixel in the output image")
     args = parser.parse_args()
 
-    app = App(args.img_url, args.kernel_size, args.wave_width, args.wave_height, args.window_width, args.window_height, args.pixel_width)
+    app = App(args.img_url, args.kernel_size, args.window_width, args.window_height, args.pixel_width)
     app.run()
